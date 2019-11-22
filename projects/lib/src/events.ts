@@ -7,6 +7,7 @@ export type EventType =
   | 'discovery_document_validation_error'
   | 'user_profile_loaded'
   | 'user_profile_load_error'
+  | 'fetch_token'
   | 'token_received'
   | 'token_error'
   | 'code_error'
@@ -23,7 +24,7 @@ export type EventType =
   | 'logout';
 
 export abstract class OAuthEvent {
-  constructor(readonly type: EventType) {}
+  constructor(readonly type: EventType) { }
 }
 
 export class OAuthSuccessEvent extends OAuthEvent {
