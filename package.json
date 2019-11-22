@@ -15,7 +15,11 @@
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
     "format": "prettier --single-quote --write projects/**/*.ts",
-    "copy:readme": "cpr README.md dist/lib/README.md --overwrite"
+    "copy:readme": "cpr README.md dist/lib/README.md --overwrite",
+    "copy:lic": "cpr LICENSE dist/lib/LICENSE --overwrite",
+    "build_lib": "ng build lib",
+    "npm_pack": "cd dist/lib && npm pack",
+    "package": "npm run build_lib && npm run copy:readme && npm run copy:lic && npm run npm_pack"
   },
   "private": true,
   "dependencies": {
