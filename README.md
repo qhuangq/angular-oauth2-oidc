@@ -46,6 +46,19 @@ constructor(private oauthService: OAuthService) {
 See the [original project documentation](https://manfredsteyer.github.io/angular-oauth2-oidc/docs/) for more information about this library.
 
 
+## build library
+1. `npm run package`
+
+## publish to npm
+1. `npm login`
+2. `npm publish ./dist/lib/oauth2-oidc-w3id-[version].tgz`
+
+## upadate package to npm
+1. update version in `./projects/lib/package.json`
+2. delete ./dist folder
+3. `npm run package`
+4. `npm publish ./dist/lib/oauth2-oidc-w3id-[version].tgz`
+
 
 
 
